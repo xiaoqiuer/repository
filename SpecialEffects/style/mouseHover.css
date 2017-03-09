@@ -1,0 +1,188 @@
+div{
+	width:800px;
+	height: 600px;
+	margin: 50px auto;
+	position:relative;
+	font-family: 黑体;
+}
+/*模糊*/
+div:hover>#bg{
+	 -webkit-filter: blur(8px);
+     -moz-filter: blur(8px);
+     -o-filter: blur(8px);
+     -ms-filter: blur(8px);
+     filter: blur(8px);
+     z-index: -1;
+}
+/*边框*/
+span{
+	background-color: #ffffff;
+	transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-in; /* Safari 和 Chrome */
+    -o-transition: all 0.3s ease-in; /* Opera */
+}
+div:hover>span{
+
+	transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+    -webkit-transition: all 0.3s ease-in; /* Safari 和 Chrome */
+    -o-transition: all 0.3s ease-in; /* Opera */
+}
+#top{
+   position: absolute;
+   top:50px;
+   left: 400px;
+   width: 0px;
+   height: 5px;
+}
+div:hover>#top{
+    
+   left: 50px;
+   width: 700px;    
+}
+#right{
+   position: absolute;
+   top:300px;
+   left: 747px;
+   width: 3px;
+   height: 0px;
+}
+div:hover>#right{
+   top: 50px;
+   height: 500px;    
+}
+#bottom{
+   position: absolute;
+   top:545px;
+   left: 400px;
+   width: 0px;
+   height: 5px;
+}
+div:hover>#bottom{
+   left: 50px;
+   width: 700px;    
+}
+#left{
+   position: absolute;
+   top:300px;
+   left: 50px;
+   width: 3px;
+   height: 0px;
+}
+div:hover>#left{
+    
+   top: 50px;
+   height: 500px;    
+}
+
+/*文字*/
+@-webkit-keyframes h {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+@-moz-keyframes h {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+@-o-keyframes h {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+@keyframes h {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+@-webkit-keyframes v {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+@-moz-keyframes v {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+@-o-keyframes v {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+@keyframes v {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -100%;
+    }
+}
+h1,h3{
+	position: absolute;
+	display: none;
+	-webkit-text-fill-color:transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+}
+h1{
+	top:200px;
+	left: 200px;
+	background-image: linear-gradient(left,#FF82AB,#6CD0E8#6CD0E8#6CD0E8 25%,#FF82AB 50%,#6CD0E8#6CD0E8 75%,#FF82AB);
+	background-image: -webkit-linear-gradient(left,#FF82AB,#6CD0E8 25%,#FF82AB 50%,#6CD0E8 75%,#FF82AB);
+	background-image: -o-linear-gradient(left,#FF82AB,#6CD0E8 25%,#FF82AB 50%,#6CD0E8 75%,#FF82AB);
+	background-image: -moz-linear-gradient(left,#FF82AB,#6CD0E8 25%,#FF82AB 50%,#6CD0E8 75%,#FF82AB);
+    background-size: 200% 100%;
+}
+h3{
+	top:300px;
+	left: 350px;
+	background-image: linear-gradient(blue 50%,#66CD00 0%);
+	background-image: -webkit-linear-gradient(blue 50%,#66CD00 0%);
+	background-image: -o-linear-gradient(blue 50%,#66CD00 0%);
+	background-image: -moz-linear-gradient(blue 50%,#66CD00 0%);
+    background-size: 100% 200%;
+}
+div:hover>h1,div:hover>h3{   
+    display:block; 
+}
+div:hover>h1{
+    -webkit-animation: h 3s infinite linear;
+    -moz-animation: h 3s infinite linear;
+    -o-animation: h 3s infinite linear;
+     animation: h 3s infinite linear;
+}
+div:hover>h3{
+	-webkit-animation: v 1s infinite ease;
+	-moz-animation: v 1s infinite ease;
+	-o-animation: v 1s infinite ease;
+	animation: v 1s infinite ease;
+
+}
+
